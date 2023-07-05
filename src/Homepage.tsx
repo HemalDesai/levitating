@@ -210,7 +210,7 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ token }) => {
       body: formData,
     })
       .then((response) => response.json())
-      .then((data) => {
+      .then(() => {
         // Handle the API response here
         setApiResponse("Form submitted successfully!🎉");
         // Display the API response to the user
