@@ -152,7 +152,6 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ token }) => {
             const { latitude, longitude } = position.coords;
             const geolocationString = `Latitude: ${latitude}, Longitude: ${longitude}`;
             setGeolocation(geolocationString);
-            console.log(geolocationString);
             setGeolocationStatus("Geolocation captured");
             // setStep((prevStep) => prevStep + 1);
           },
@@ -178,7 +177,6 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ token }) => {
   };
 
   const handleSubmit = () => {
-    console.log({ token });
     // Create a new FormData object
     const formData = new FormData();
 
@@ -214,7 +212,6 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ token }) => {
       .then((response) => response.json())
       .then((data) => {
         // Handle the API response here
-        console.log("Form filled successfully!", data);
         setApiResponse("Form submitted successfully!🎉");
         // Display the API response to the user
         // alert(JSON.stringify(data));

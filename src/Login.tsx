@@ -42,7 +42,6 @@ const Login: React.FC<LoginProps> = ({ setToken }) => {
         const { authToken } = data;
 
         setLoginStatus("Login successful!");
-        console.log("Auth token:", authToken);
         setToken(authToken);
 
         // Perform further actions like saving the auth token or redirecting the user
