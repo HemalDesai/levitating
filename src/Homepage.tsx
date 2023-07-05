@@ -156,10 +156,7 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({ token }) => {
             setGeolocationStatus("Geolocation captured");
             // setStep((prevStep) => prevStep + 1);
           },
-          (error) => {
-            setGeolocationStatus("Geolocation capture failed");
-            // setStep((prevStep) => prevStep + 1);
-          }
+          
         );
       } else {
         setGeolocationStatus("Geolocation not supported");

@@ -11,6 +11,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<Login setToken={handleSetToken} />} />
         <Route path="/login" element={<Login setToken={handleSetToken} />} />
         <Route path="/homepage" element={<MultiStepForm token={token} />} />
       </Routes>
